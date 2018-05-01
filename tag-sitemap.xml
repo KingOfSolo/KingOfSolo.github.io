@@ -10,14 +10,14 @@
 
     <url>
         <loc>http://yoursite-url/tags/Hexo/</loc>
-        <lastmod>2018-05-01T08:29:18.294Z</lastmod>
+        <lastmod>2018-05-01T08:30:38.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://yoursite-url/tags/Github/</loc>
-        <lastmod>2018-05-01T08:29:18.294Z</lastmod>
+        <lastmod>2018-05-01T08:30:38.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
