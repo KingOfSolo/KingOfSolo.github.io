@@ -39,6 +39,7 @@
 
 .sidebar-container .short-about img {
   width: 80%;
+  object-fit: cover;
   display: block;
   border-radius: 5px;
   margin-bottom: 20px;
