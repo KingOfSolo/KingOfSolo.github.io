@@ -2,17 +2,17 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://yoursite-url/post-sitemap.xml</loc>
+        <loc>http://kingofsolo.github.io/post-sitemap.xml</loc>
         <lastmod>2018-05-01T09:51:39.680Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/page-sitemap.xml</loc>
+        <loc>http://kingofsolo.github.io/page-sitemap.xml</loc>
         <lastmod>2018-04-30T15:40:17.867Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/tag-sitemap.xml</loc>
+        <loc>http://kingofsolo.github.io/tag-sitemap.xml</loc>
         <lastmod>2018-05-01T08:30:38.806Z</lastmod>
     </sitemap>
 

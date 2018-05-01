@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://yoursite-url</loc>
+        <loc>http://kingofsolo.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://yoursite-url/2015/05/27/%E4%BA%9B%E8%AE%B8%E5%BE%80%E4%BA%8B/</loc>
+        <loc>http://kingofsolo.github.io/2015/05/27/%E4%BA%9B%E8%AE%B8%E5%BE%80%E4%BA%8B/</loc>
         <lastmod>2018-05-01T09:51:39.680Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -15,7 +15,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite-url/2018/05/01/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+        <loc>http://kingofsolo.github.io/2018/05/01/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
         <lastmod>2018-05-01T08:30:38.806Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
