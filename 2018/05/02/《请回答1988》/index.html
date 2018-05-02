@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          使用hexo+github搭建个人博客 - 伍俊的博客
+          《请回答1988》 - 伍俊的博客
         
     </title>
 
-    <link rel="canonical" href="http://kingofsolo.github.io/2018/05/01/使用hexo-github搭建个人博客/">
+    <link rel="canonical" href="http://kingofsolo.github.io/2018/05/02/《请回答1988》/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -59,6 +59,9 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 
@@ -69,7 +72,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('bg.jpg')
+            background-image: url('bg2.jpg')
             /*post*/
         
     }
@@ -90,16 +93,14 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                            
-                              <a class="tag" href="/tags/#Github" title="Github">Github</a>
+                              <a class="tag" href="/tags/#电视剧" title="电视剧">电视剧</a>
                             
                         </div>
-                        <h1>使用hexo+github搭建个人博客</h1>
+                        <h1>《请回答1988》</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by KingOfSolo on
-                            2018-05-01
+                            2018-05-02
                         </span>
                     </div>
                 
@@ -217,71 +218,41 @@
                 post-container">
 
                 <blockquote>
-<p>本篇介绍如何通过hexo将自己的个人博客部署到github上</p>
+<p>双门洞的一个胡同里，一群平凡人的故事。所谓胡同，就是用时间来造就朋友。</p>
 </blockquote>
-<h1><span id="准备">准备</span></h1>
-<h2><span id="nodejs">Node.js</span></h2>
-<p>在使用hexo之前，必须在本机安装node环境。node.js是服务器端的javascript，npm是node.js下的包管理器。从<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a>下载对应平台的安装程序，网速慢的同学可以移步<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fnodejs" target="_blank" rel="noopener">国内镜像</a>。</p>
-<p>安装完成后，在windows环境下，打开命令提示符，输入<code>node -v</code>，会看到当前node版本<img src="node_v.png" alt="node-v"></p>
-<p>目前node的最新版本为<code>8.11.1</code></p>
-<p>网速较慢的可以安装淘宝npm镜像（cnpm），输入如下命令：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org</span><br></pre></td></tr></table></figure>
-<h2><span id="git">Git</span></h2>
-<p>在window上安装Git，可以从Git官网直接<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a>，网速慢的可以移步<a href="https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit" target="_blank" rel="noopener">国内镜像</a>，然后按默认选项安装即可。</p>
-<p>安装完后，在电脑的任何位置鼠标右键能够出现如下两个选择</p>
-<p><img src="git-bash.png" alt="git-bash"></p>
-<p>就代表安装成功。安装成功后，还要进行配置，在命令行输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "Your Name"</span><br><span class="line">git config --global user.email "email@example.com"</span><br></pre></td></tr></table></figure>
-<p>设置git上你的用户名和邮件，表示你这台机器上的所有Git仓库都会使用这个配置</p>
-<h2><span id="github">Github</span></h2>
-<p>Github作为码农最大的”交友“和”装X“平台，你要想像大佬们一样优秀，就得拥有一个github账号，况且你还得将个人博客部署到github上。可前往<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">官网注册</a>。</p>
-<p><img src="signup.png" alt="signup"></p>
-<h1><span id="新建项目">新建项目</span></h1>
-<p>注册github账号后，新建一个github项目，项目名必须遵守格式：<a href="http://xn--eqr924acs7a.github.io" target="_blank" rel="noopener">账户名.github.io</a>，不然可能会带来很多麻烦。勾选Initialize this repository with a README。</p>
-<p><img src="github-new.png" alt="github-new"></p>
-<h1><span id="安装hexo">安装Hexo</span></h1>
-<p>在合适的地方新建一个文件夹，比如F盘的blog文件夹。在该文件夹中鼠标右键打开git bash。</p>
-<p>这时候要用到前面安装的npm包管理器来安装hexo，输入如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
-<p>安装后，输入<code>hexo -v</code>检查hexo检查是否安装成功，会出现如下图：</p>
-<p><img src="hexo-v.png" alt="hexo-v"></p>
-<p>再输入hexo init，初始化该文件夹，可能需要等待一会…</p>
-<p>初始化完后，最后会出现<code>Start blogging with Hexo</code></p>
-<p>输入<code>npm install</code>，安装所需要的组件</p>
-<p>安装完后，输入<code>hexo g</code>，体验hexo</p>
-<p><img src="hexo-g.png" alt="hexo-g"></p>
-<p>输入<code>hexo s</code>，开启服务器，访问<code>localhost:4000</code>，如果出现如下图就成功了</p>
-<p><img src="success.png" alt="success"></p>
-<h1><span id="配置deployment">配置Deployment</span></h1>
-<p>在文件夹中，找到config.yml文件，修改repo值（在文件的末尾）</p>
-<p><img src="repo.png" alt="repo"></p>
-<p>repository的值是你在github项目的ssh</p>
-<p><img src="ssh.png" alt="ssh"></p>
-<p>若是https，记得切换成ssh</p>
-<h1><span id="新建博客">新建博客</span></h1>
-<p>输入命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post "博客名"</span><br></pre></td></tr></table></figure>
-<p><img src="hello.png" alt="hello"></p>
-<p>这时候在文件夹<code>posts</code>目录下将会看到已经创建的文件</p>
-<p><img src="newblog.png" alt="newblog"></p>
-<p>在生成以及部署之前，需要安装一个扩展：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>用markdown编辑好文章之后，使用如下命令部署到github上：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p><img src="edit.png" alt="edit"></p>
-<p>部署成功后访问你的地址：<code>http://用户名.github.io</code>，那么就可以看到你的文章啦</p>
-<h1><span id="主题">主题</span></h1>
-<p>hexo为开发者提供了很多免费的主题，如果你觉得当前的博客主题不好看，可以通过<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官网主题</a>，或者可以看一下知乎下关于hexo主题的<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">问题讨论</a></p>
-<p>找到喜欢的主题之后，找到其github的地址，这里以Next主题为例。在项目文件夹中，鼠标右键选择<code>git bash here</code>，输入如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>将主题clone到themes/next文件夹中。</p>
-<p>在项目的根目录下，打开配置文件config.yml文件，修改主题为them:next</p>
-<p><img src="theme.png" alt="theme"></p>
-<p>然后重新启动和部署项目：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>访问地址你就可以看到更换的主题啦</p>
-<p>主题相关的其他参数设置可以查看对应主题的说明或者文档</p>
+<p>陆陆续续看完了《请回答》系列的三部，从《1997》到《1994》再到《1988》。最开始看的时候，是由于《请回答1988》在豆瓣上的超高评分以及朋友的推荐，一部2015年的剧能够超越一众经典，成为豆瓣上评分最高的韩剧，着实吸引了我。</p>
+<p>一部优秀的艺术作品，能够让人产生共鸣，《请回答1988》在这一点上，确实做到了。以1988年汉城奥运会为背景，讲述住在首尔市道锋区双门洞的五个家庭的故事，涵盖了亲情、友情、爱情，甚至于邻里之情，有怀旧，有青春，有感动，有欢笑。每一个人都是这部剧的主角，活泼的德善，暖心的正焕，单纯的崔泽，孝顺的善宇，机灵的东龙，以及他们的父母，相处之间折射出的感动，能够温暖人心。</p>
+<p>《请回答1988》中对情感刻画地非常好。成德善为了缓解三姐弟两个鸡蛋的尴尬，她主动跟妈妈说不用管她，生日附带着和姐姐一起过。在得知自己心心念念的奥运会去不了的时候，心中的委屈终于爆发，“为什么只有我叫成德善，我是那么可以随便对待也无所谓的人吗，为什么不给我煎荷包蛋，我也喜欢荷包蛋啊”。在奥运会结束的时候，德善看到了胡同口等着为她过生日的爸爸</p>
+<p><img src="img1.jpg" alt="img1"></p>
+<p><img src="img2.jpg" alt="img2"></p>
+<p>宝拉参与游行示威被警察抓，母亲李日花在大雨中拉着警察求情说女儿如何聪明如何懂事从不让家里担心。胡同里的人下至小孩上至长辈都对宝拉暴烈的脾气有点怕，但妈妈知道自己女儿是表面冷但心很热。“偶尔觉得妈妈很丢人，妈妈为什么连起码的脸面和自尊心都没有呢。我都觉得上火。比起她自己，她有更想守护的，那就是我”</p>
+<p><img src="img4.jpg" alt="img3"></p>
+<p>初雪夜告白。崔泽初雪约德善去看电影，善宇初雪向宝拉告白，崔泽爸爸初雪跟善宇妈妈说以后在一起过吧</p>
+<p><img src="img5.png" alt="img5"></p>
+<p><img src="img7.jpg" alt="img7"></p>
+<p><img src="img6.png" alt="img6"></p>
+<p>附带一张《请回答1994》中初雪夜七封和娜静告别去日本的图片</p>
+<p><img src="img8.png" alt="img8"></p>
+<p>正焕一直守护着德善。为了和他一起上学，下雪的时候在大门口等一个多小时；在很挤的公交车上强势保护德善；即使在圣诞节礼物互赠环节抽到的不是德善，也会为她准备心爱的粉红色手套；即使在圣诞节礼物互赠环节抽到的不是德善，也会为她准备心爱的粉红色手套；下着雨，也会拿着伞在街口等晚自习回来的德善；一个电话就可以跑到超远的江南去买单…但正焕就是不开口表白，德善也迷迷糊糊。正焕知道阿泽也喜欢德善的时候，他想都没想，就放弃了，因为他是一个内心很善良的人，对朋友非常好。最后，他确实说服了自己想要去向德善表白之后，却因为路上该死的红灯而错过了。正如他独白的那样子，搞怪的不是红绿灯，也不是时机，而是数不清的犹豫。</p>
+<p><img src="img12.jpg" alt="img12"></p>
+<p><img src="img10.JPEG" alt="img10"></p>
+<p><img src="img11.jpg" alt="img11"></p>
+<p>崔泽是胡同里的名人，是韩国国宝级的围棋大师，获得很多围棋冠军。从小生活中只有围棋，对围棋痴迷。但德善走进了他的世界，他愿意放下围棋，去走进德善的内心世界。不善语言，但有一颗善良的心。德善得知善宇喜欢的人是她姐，在家里哭得死去活来的时候，阿泽拖着下了十几小时棋疲惫的身体给德善打电话，约她去看电影。德善陪崔泽去中国参加围棋比赛，照顾崔泽。得知德善去看演唱会被放鸽子，崔泽气喘吁吁的赶过去，比正焕早一步。可能编剧更站在崔泽这一边，但是，正焕路上遇到红灯，与德善擦肩而过。崔泽在围棋上谦逊好学，对待朋友很善良，在所有人看来都是“好孩子”，但是他也有一些“坏孩子”的习惯，比如喜欢在围棋比赛前吸烟释放压力，和朋友们喝酒。在崔泽有两个世界，一个他的围棋世界，对外他是围棋大师，有极高的地位，受世人尊重；一个是他在双门洞胡同的世界，在这里他是一个白痴，连生活都不能自理，受朋友们照顾的对象。有很强烈的反差感。崔泽是这部剧中塑造得非常成功的角色，据说是以韩国历史上的著名围棋天才李昌镐为原型。</p>
+<p><img src="img13.jpg" alt="img13"></p>
+<p>之前流行的一张佛系表情包，就来自剧中的正峰哥</p>
+<p><img src="img14.jpg" alt="img14"></p>
+<p>《请回答1988》中邻里之间的感情描述得十分细腻，可以说是这部剧中的一个重点。五个家庭之间的相互关心、照顾、陪伴。编剧对于生活细节的观察细致入微，让观众在他们嬉笑怒骂、鸡毛蒜皮的平常生活中会心一笑，感同身受，仿佛描述的就是自己身边的生活。剧中亲情隐忍而深沉；邻里间互助关怀；青梅竹马间爱之深又极力逃开；无疾而终的暗恋；艰难的姐弟恋；最后终成正果的爱情变得尤为珍贵。几乎每一种感情都值得细细体味，让作为观众的我们重新对爱情、亲情、友情的思考。这个剧让人感到人与人之间的感情复杂而美好，亲情、爱情、邻里间的感情让人思考，更让人感动。</p>
+<p><strong>“当再次回到凤凰堂胡同之时，就如同流逝的岁月般，胡同也上了年岁，但，无论是我的青春还是这条胡同，再也无法回到过去了。岁月虽然流逝，一切终将过去，年岁渐长。青春之所以美丽，恐怕这就是原因，在刹那的瞬间，耀眼闪烁之后，再也无法回去。涌出眼泪的青涩岁月，我也有过……这种青春。”</strong></p>
+<p><strong>”怀念那个时期，怀念那个胡同，并不只是因为怀念年轻时候的自己，而是因为那里有爸爸的青春，妈妈的青春，朋友们的青春，和我所有爱着的青春。也因为没能对那些再也取法聚到一起的年轻的风景，最后问候一声，而感到惋惜。如今对已经逝去的东西，对再也无法回去的时间，说一句迟到的问候。“</strong></p>
+<p>“你是否也想看看你许久不见的朋友？”</p>
+<p>双门洞的故事结束了。</p>
+<p>我们的故事还在继续，你所在的生活就是你的“请回答”</p>
+<p>亲情、友情、爱情对于你的呼应，你听到了吗？</p>
+<p>如果听到了</p>
+<p>请回答！</p>
+
+    <div id="aplayer-RsmysapT" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004I0Xjc1XVFpa" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme=" #31C37C"></div>
+<p>（《请回答1988》中的一首歌，网易云音乐没版权。歌曲来源：qq音乐）</p>
 
                 
 
@@ -289,13 +260,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2018/05/02/《请回答1988》/" data-toggle="tooltip" data-placement="top" title="《请回答1988》">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2015/05/27/些许往事/" data-toggle="tooltip" data-placement="top" title="些许往事">Next Post &rarr;</a>
+                            <a href="/2018/05/01/使用hexo-github搭建个人博客/" data-toggle="tooltip" data-placement="top" title="使用hexo+github搭建个人博客">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -325,7 +292,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">准备</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Node.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Git</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Github</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">新建项目</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">配置Deployment</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">新建博客</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">主题</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -345,9 +312,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-                        
-                          <a class="tag" href="/tags/#Github" title="Github">Github</a>
+                          <a class="tag" href="/tags/#电视剧" title="电视剧">电视剧</a>
                         
                     </div>
                 </section>
@@ -378,8 +343,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "your-disqus-ID";
-    var disqus_identifier = "http://kingofsolo.github.io/2018/05/01/使用hexo-github搭建个人博客/";
-    var disqus_url = "http://kingofsolo.github.io/2018/05/01/使用hexo-github搭建个人博客/";
+    var disqus_identifier = "http://kingofsolo.github.io/2018/05/02/《请回答1988》/";
+    var disqus_url = "http://kingofsolo.github.io/2018/05/02/《请回答1988》/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
