@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://kingofsolo.github.io/about/</loc>
+        <lastmod>2018-05-03T08:56:18.116Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://kingofsolo.github.io/archive/</loc>
         <lastmod>2018-05-03T08:47:16.329Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +23,6 @@
     <url>
         <loc>http://kingofsolo.github.io/tags/</loc>
         <lastmod>2018-04-30T15:40:17.867Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://kingofsolo.github.io/about/</loc>
-        <lastmod>2018-04-30T15:40:17.597Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
