@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Tags - 伍俊的博客
+          标签 - 伍俊的博客
         
     </title>
 
@@ -88,7 +88,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
                     <div class="site-heading">
-                        <h1>Tags</h1>
+                        <h1>标签</h1>
                         <!--<hr class="small">-->
                         <span class="subheading">Hey, this is Tags.</span>
                     </div>
@@ -136,21 +136,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">标签</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
+                            <a href="/about/">关于我</a>
                         </li>
                         
                     
@@ -196,222 +189,185 @@
     <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id="tag_cloud" class="tags">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
                 
-                    <a href="#生活" title="生活" rel="4">生活</a>
+
+                <!-- 如果开启评论功能 -->
                 
-                    <a href="#面试" title="面试" rel="1">面试</a>
-                
-                    <a href="#篮球" title="篮球" rel="2">篮球</a>
-                
-                    <a href="#Hexo" title="Hexo" rel="1">Hexo</a>
-                
-                    <a href="#Github" title="Github" rel="1">Github</a>
-                
-                    <a href="#电视剧" title="电视剧" rel="1">电视剧</a>
+                    <hr>
+
+                    
+
+                    
+                    <!-- disqus 评论框 start -->
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                    <!-- disqus 评论框 end -->
+                    
+
+
+                    
+
+                    
+                    <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+                    <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES * * */
+                        var disqus_shortname = "your-disqus-ID";
+                        var disqus_identifier = "http://kingofsolo.github.io/tags/index.html";
+                        var disqus_url = "http://kingofsolo.github.io/tags/index.html";
+
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+
+                        
+                    </script>
+                    <!-- disqus 公共JS代码 end -->
+                    
                 
             </div>
 
-            <!-- 标签列表 -->
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#生活" title="生活" rel="4">生活</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#篮球" title="篮球" rel="2">篮球</a>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id="avatar_pic" src="/img/user.jpeg">
+        
+
+        
+            <p>你是一只修行千年的狐，我是一介书生独醉江湖</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
 
             
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="生活">
-                    <span class="tag-text">生活</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2019/01/02/2018年终总结/">
-                        <h2 class="post-title">
-                            2018年终总结
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2021/01/01/2020年终总结/">
-                        <h2 class="post-title">
-                            2020年终总结
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/01/01/2019年终总结/">
-                        <h2 class="post-title">
-                            2019年终总结
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2015/08/27/些许往事/">
-                        <h2 class="post-title">
-                            些许往事
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="面试">
-                    <span class="tag-text">面试</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/05/03/2018春招总结/">
-                        <h2 class="post-title">
-                            2018春招总结
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="篮球">
-                    <span class="tag-text">篮球</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/05/02/你不看篮球，所以你不知道/">
-                        <h2 class="post-title">
-                            你不看篮球，所以你不知道
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/06/09/写于NBA2017-18赛季总决赛之后/">
-                        <h2 class="post-title">
-                            写于NBA2017-18赛季总决赛之后
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Hexo">
-                    <span class="tag-text">Hexo</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/05/01/使用hexo-github搭建个人博客/">
-                        <h2 class="post-title">
-                            使用hexo+github搭建个人博客
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Github">
-                    <span class="tag-text">Github</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/05/01/使用hexo-github搭建个人博客/">
-                        <h2 class="post-title">
-                            使用hexo+github搭建个人博客
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="电视剧">
-                    <span class="tag-text">电视剧</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2018/05/02/《请回答1988》/">
-                        <h2 class="post-title">
-                            《请回答1988》
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
+
             
 
+            
+                <li>
+                    <a target="_blank" href="https://github.com/KingOfSolo">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+        <hr>
+    
+        
+  <h5>RECENT POSTS
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/2021/01/01/2020年终总结/">2020年终总结</a>
+        </li>
+      
+        <li>
+          <a href="/2020/01/01/2019年终总结/">2019年终总结</a>
+        </li>
+      
+        <li>
+          <a href="/2019/01/02/2018年终总结/">2018年终总结</a>
+        </li>
+      
+        <li>
+          <a href="/2018/06/09/写于NBA2017-18赛季总决赛之后/">写于NBA2017-18赛季总决赛之后</a>
+        </li>
+      
+        <li>
+          <a href="/2018/05/03/2018春招总结/">2018春招总结</a>
+        </li>
+      
+    </ul>
+  </div>
+</h5>
+        <hr>
+    
+        <!-- Friends Blog -->
 
-        </div>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="https://hitigerzzz.github.io" target="_blank">Hitigerzzz</a></li>
+    
+        <li><a href="https://aneureka.github.io" target="_blank">Hiki</a></li>
+    
+        <li><a href="https://callmewuxin.github.io" target="_blank">callmewuxin</a></li>
+    
+</ul>
+
+        <hr>
+    
+</div>
+
+        
     </div>
 </div>
 
